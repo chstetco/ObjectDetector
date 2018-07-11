@@ -20,6 +20,14 @@ The package has been tested with Ubuntu 16.04, ROS Kinetic and OpenCV 2.4.9 usin
 * download and install [OpenCV](https://docs.opencv.org/3.3.1/d7/d9f/tutorial_linux_install.html) and cam driver packages. 
 * run `catkin build`
 * source `source devel/setup.bash`
-* start the usb cam driver, e.g. 'rosrun usb_cam usb_cam_node'
+* start the usb cam driver, e.g. `rosrun usb_cam usb_cam_node`
 * start the object detector using `rosrun color_detector color_detector`
 * to see the output via ROS you could use a GUI e.g. `rqt_image_view` or direct line command `rosrun image_view image_view image:=/object_detector/image_treshold` 
+
+## Topics
+Basically the object detector can either output the thresholded image or the contour image (or both if you want). Therefore, two topics are essential 
+* `**/object_detector/image_treshold**`
+outputs the tresholded image with parameters `*width=640*`
+
+## Troubleshooting
+Always ensure that the usb_cam driver is running *before* you start the object detector node. 
