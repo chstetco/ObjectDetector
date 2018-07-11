@@ -27,7 +27,11 @@ The package has been tested with Ubuntu 16.04, ROS Kinetic and OpenCV 2.4.9 usin
 ## Topics
 Basically the object detector can either output the thresholded image or the contour image (or both if you want). Therefore, two topics are essential 
 * **`/object_detector/image_treshold`**
-outputs the tresholded image with parameters `*width=640*`
+outputs the tresholded image with parameters *`width=640`*, *`height=480`*, *`step=640`*, *`encoding="mono8"`*
+* **`/object_detector/contour_treshold`**
+outputs the contour image with parameters *`width=640`*, *`height=480`*, *`step=640`*, *`encoding="mono8"`*
+
+## Simple Examples 
 
 ## Troubleshooting
 Always ensure that the usb_cam driver is running *before* you start the object detector node. 
