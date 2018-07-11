@@ -26,7 +26,7 @@ The package has been tested with Ubuntu 16.04, ROS Kinetic and OpenCV 2.4.9 usin
 
 ## Topics
 Basically the object detector can either output the thresholded image or the contour image (or both if you want). Therefore, two topics are essential 
-* `**/object_detector/image_treshold**`
+* **`/object_detector/image_treshold`**
 outputs the tresholded image with parameters `*width=640*`
 
 ## Troubleshooting
